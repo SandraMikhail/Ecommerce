@@ -1,4 +1,4 @@
-<nav class="bg-gray-300 border-gray-200 dark:bg-gray-900">
+<nav class="bg-gray-300 border-gray-200 ">
   <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a routerLink="/home" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="/images/freshcart-logo.svg" class="h-8" alt="Flowbite Logo" />
@@ -11,7 +11,7 @@
     </button>
     <div class="hidden w-full md:flex md:w-auto  flex-grow" id="navbar-default">
 @if(isLogin){
-        <ul class="capitalize flex flex-col p-4 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <ul class="capitalize flex flex-col p-4 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0   ">
         <li>
           <a routerLink="home" routerLinkActive="active bg-green-500" class="block py-2 px-3 text-gray-900  rounded-sm" aria-current="page">Home</a>
         </li>
@@ -29,7 +29,7 @@
 
       </ul>
 }
-      <ul class="capitalize flex flex-col p-4 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ms-auto">
+      <ul class="capitalize flex flex-col p-4 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0   ms-auto">
         @if(isLogin== false){
              <li>
           <a routerLink="/login"  routerLinkActive="active bg-green-500" class="block py-2 px-3 text-gray-900  rounded-sm" aria-current="page">login</a>

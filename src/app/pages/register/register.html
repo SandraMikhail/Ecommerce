@@ -8,7 +8,7 @@
     <div class="mb-2">
       @if(errorMsg!=""){
       <div
-        class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+        class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-300 dark:text-red-400"
         role="alert"
       >
         <span class="font-medium">Danger alert!</span>
@@ -25,13 +25,13 @@
         formControlName="name"
         type="text"
         id="name-input"
-        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
       />
 
       @let nameControl= registerForm.controls['name']; @if(nameControl.errors &&
       registerForm.controls['name'].touched){
       <div
-        class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+        class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-300 dark:text-red-400"
         role="alert"
       >
         <svg
@@ -79,7 +79,7 @@
       @if(registerForm.controls['email'].errors&&
       registerForm.controls['email'].touched){
       <div
-        class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+        class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-300 dark:text-red-400"
         role="alert"
       >
         <svg
@@ -125,7 +125,7 @@
       @if(registerForm.controls['password'].errors&&
       registerForm.controls['password'].touched){
       <div
-        class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+        class="flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-300 dark:text-red-400"
         role="alert"
       >
         <svg
@@ -165,7 +165,7 @@
         formControlName="rePassword"
         type="password"
         id="rePassword-input"
-        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
       />
     </div>
 
@@ -179,7 +179,7 @@
         formControlName="phone"
         type="tel"
         id="phone-input"
-        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-300 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
       />
       @if(registerForm.controls['phone'].errors &&
       registerForm.controls['phone'].touched){
