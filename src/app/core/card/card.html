@@ -1,0 +1,36 @@
+<div>
+  <div
+    [routerLink]="['/details', product.slug, product.id]"
+    class="card gap-10 w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+  >
+    <div class="card-img">
+      <img class="rounded-t-lg" [src]="product.imageCover" alt="" />
+    </div>
+    <div class="card-body">
+      <div class="p-5">
+        <a>
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            {{ product.title.split(' ', 3).join('') }}
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2">
+          {{ product.description }}
+        </p>
+               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2">
+          price: {{ product.price }} EGP
+
+        </p>
+      </div>
+
+      <!-- Add to cart button inside the card -->
+      <button
+        class="btn"
+        (click)="addProductItemToCart(product.id); $event.stopPropagation()"
+      >
+        Add to cart
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<section  >
+  <h2 class="text-3xl">Checkout</h2>
+
+  <form [formGroup]="checkoutForm" class="w-[80%] mx-auto p-5" >
+    @if(errorMsg) {
+      <p style="color: red;">{{ errorMsg }}</p>
+    }
+
+    <div formGroupName="shippingAddress">
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Details</label>
+      <input formControlName="details" type="text"class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" />
+      @if(checkoutForm.get('shippingAddress.details')?.invalid && checkoutForm.get('shippingAddress.details')?.touched) {
+        <small style="color: red;">Details is required</small>
+      }
+
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
+      <input formControlName="phone" type="text" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" />
+      @if(checkoutForm.get('shippingAddress.phone')?.invalid && checkoutForm.get('shippingAddress.phone')?.touched) {
+        <small style="color: red;">Phone is required</small>
+      }
+
+      <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
+      <input formControlName="city" type="text" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" />
+      @if(checkoutForm.get('shippingAddress.city')?.invalid && checkoutForm.get('shippingAddress.city')?.touched) {
+        <small style="color: red;">City is required</small>
+      }
+    </div>
+    <div class="flex justify-between gap-10">
+       <button class="main-btn mt-3" (click)="submitForm()">Pay with visa </button>
+       <button class="main-btn mt-3" (click)="submitFormCash()">Pay in cash</button>
+    </div>
+
+  </form>
+</section>

@@ -1,0 +1,52 @@
+<section class="container mx-auto">
+<!--Slider-->
+  <section class="main-slider py-5">
+    <div class="flex">
+      <div class="slider w-[70%]" >
+         <owl-carousel-o [options]="customOptionsMainSlider">
+    <ng-template carouselSlide><img src="/images/img1.avif" alt="" class="w-full h-[300px]"></ng-template>
+    <ng-template carouselSlide> <img src="/images/img2.avif" alt="" class="w-full h-[300px"></ng-template>
+    <ng-template carouselSlide><img src="/images/img3.avif" alt="" class="w-full h-[300px]"></ng-template>
+    <ng-template carouselSlide><img src="/images/img4.avif" alt="" class="w-full h-[300px]"></ng-template>
+    <ng-template carouselSlide><img src="/images/img5.avif" alt="" class="w-full h-[300px]"></ng-template>
+    <ng-template carouselSlide><img src="/images/img6.avif" alt="" class="w-full h-[300px]"></ng-template>
+
+  </owl-carousel-o>
+      </div>
+      <div class="images w-[30%]">
+<img src="/images/grocery-banner-2.jpeg" alt="" class="w-full h-[150px]">
+<img src="/images/grocery-banner.png" alt="" class="w-full h-[150px]">
+
+      </div>
+    </div>
+  </section>
+  <!--popular categories-->
+<section class="cat-slider py-5">
+     <h2 class="text-3xl mb-4 block">popular Categories</h2>
+       <owl-carousel-o [options]="customOptions">
+
+    @for (category of categoriesList; track $index) {
+      <ng-template carouselSlide>
+      <div>
+        <img [src]="category.image" class="h-[250px]" alt="">
+        <h3 class="text-green-700 mt-5">{{category.name}}</h3>
+      </div>
+      </ng-template>
+    }
+
+  </owl-carousel-o>
+</section>
+
+<!--products-->
+  <section class="products my-5">
+     <h2 class="text-3xl mb-4 block">popular products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+
+
+      @for (product of productsList.slice(0,12); track $index) {
+      <app-card [product]="product"></app-card>
+
+      }
+    </div>
+  </section>
+</section>

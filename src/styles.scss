@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'ngx-toastr/toastr';
+
+
+
+.main-btn{
+  @apply bg-green-500 text-white block ms-auto rounded-md px-6 py-2 hover:bg-green-800 disabled:bg-red-500
+}
+
+@layer components{
+  .btn{
+    @apply  disabled:bg-gray-500 disabled:cursor-not-allowed bg-green-600 text-white w-[90%] mx-auto py-4 block rounded-md mb-4
+  }
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Playfair Display", serif;
+}

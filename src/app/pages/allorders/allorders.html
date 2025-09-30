@@ -1,0 +1,41 @@
+<section class="bg-gray-200 p-4 flex justify-center">
+  <div class="container grid items-start sm:grid-cols-12 gap-10">
+    <div class="col-span-12 rounded-lg shadow mx-auto ">
+      <div class="flex items-center space-x-2">
+        <h1 class="text-5xl my-8">All Orders</h1>
+      </div>
+
+      <div class="col-span-12 bg-white p-4 rounded-lg shadow">
+        <h2 class="text-2xl">Order Summary</h2>
+
+        @for (order of myOrders; track $index) {
+
+
+
+          @for ( item of order.cartItems; track $index) {
+            <div class="flex items-center justify-between my-5">
+
+              <div class="flex flex-col ml-4">
+                <h3 class="text-xl font-semibold">{{ item.product.title }}</h3>
+                <p>Price: {{ item.price }}</p>
+                <p>Quantity: {{ item.count }}</p>
+              </div>
+              <img [src]="item.product.imageCover" [alt]="item.product.title" class="w-24 h-24 object-cover rounded" />
+            </div>
+          }
+          <div class="mt-2 font-bold text-lg bg-green-400">
+            Total Order Price: {{ order.totalOrderPrice }}
+          </div>
+               <h3 class="bg-yellow-300">Shipping Address: {{ order.shippingAddress.details }}, City: {{ order.shippingAddress.city }}, phone:{{order.shippingAddress.phone}}</h3>
+        }
+
+        <button class="btn my-10" routerLink="/home">Go to home page </button>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
